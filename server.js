@@ -2,7 +2,7 @@ const express = require("express");
 const hbs = require("hbs");
 var app = express(); //making new express app
 const fs = require("fs");
-
+const port = process.env.PORT || 3000;
 hbs.registerPartials(__dirname + "/views/partials");
 app.set("view engine", "hbs"); // w set to perwsze to key co chce ustawić a drugie to value
 
@@ -52,6 +52,6 @@ app.get("/bad", (req, res) => {
 });
 
 //This below can run without second argument
-app.listen(3000, () => {
-  console.log("server is up on port 3000");
+app.listen(port, () => {
+  console.log(`server is up on port ${port} `);
 });
