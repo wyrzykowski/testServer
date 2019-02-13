@@ -40,6 +40,12 @@ app.get("/about", (req, res) => {
   });
 });
 
+app.get("/project", (req, res) => {
+  res.render("project.hbs", {
+    pageTitle: " Project Page",
+    bodyPage: "Example text here."
+  });
+});
 app.get("/", (req, res) => {
   res.render("home.hbs", {
     pageTitle: "Home Page",
